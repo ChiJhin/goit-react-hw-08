@@ -1,14 +1,17 @@
 import { BsFillPersonFill } from "react-icons/bs";
 import { FaPhone } from "react-icons/fa6";
-
 import css from "./Contact.module.css";
-
 import { useDispatch } from "react-redux";
 import { deleteContacts } from "../../redux/contact/operation";
 
+
+
 const Contact = ({ dataContact: { id, name, number } }) => {
   const dispatch = useDispatch();
-  const handleDeleteContact = () => dispatch(deleteContacts(id));
+ 
+
+  const handleDeleteContact = () => dispatch(deleteContacts(id))
+ 
 
   return (
     <>
