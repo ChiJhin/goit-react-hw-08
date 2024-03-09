@@ -23,7 +23,17 @@ export const addContacts = createAsyncThunk(
   async (dataContacts, thunkAPI) => {
     try {
       const response = await axios.post(`${BASE_URL}contacts`, dataContacts);
-      toast.error("added")
+      toast.success(`You have successfully added ${dataContacts.name} contact!`, {
+        style: {
+          border: '1px solid #713200',
+          padding: '16px',
+          color: '#713200',
+        },
+        iconTheme: {
+          primary: '#713200',
+          secondary: '#FFFAEE',
+        },
+      });
       return response.data;
     } catch (error) {
       
@@ -37,7 +47,16 @@ export const deleteContacts = createAsyncThunk(
   async (id, thunkAPI) => {
     try {
       const response = await axios.delete(`${BASE_URL}contacts/${id}`);
-      toast.error("deleted.")
+      toast('You have deleted contact!',
+  {
+    icon: '👏',
+    style: {
+      borderRadius: '10px',
+      background: '#333',
+      color: '#fff',
+    },
+  }
+);
       return response.data;
     } catch (error) {
       thunkAPI.rejectWithValue(error.message);

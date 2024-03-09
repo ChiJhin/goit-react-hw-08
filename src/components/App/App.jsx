@@ -9,6 +9,7 @@ import { PrivateRoute } from "../PrivateRoute";
 import { refreshUser } from "../../redux/user/operation";
 import { selectIsRefreshing } from "../../redux/user/selector";
 import { selectIsLoading } from "../../redux/contact/selector";
+import { Toaster } from "react-hot-toast";
 
 const HomePage = lazy(() => import("../../pages/Home/Home"));
 const RegisterPage = lazy(() => import("../../pages/Register/Register"));
@@ -24,6 +25,10 @@ const App = () => {
   const isLoading = useSelector(selectIsLoading);
   return (
     <>
+      <Toaster 
+      position="top-right"
+      reverseOrder={false}
+      />
       {isRefreshed ? (
         <Loader />
       ) : (
