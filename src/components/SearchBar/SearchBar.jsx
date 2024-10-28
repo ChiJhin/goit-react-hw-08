@@ -13,7 +13,7 @@ const SearchBar = () => {
   const onChange = (evt) => {
     dispatch(filterNumber(evt.target.value));
   }
-  // console.log(filtData());
+ 
 
   return (
     <div className={css.searchBar}>

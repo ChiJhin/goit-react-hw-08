@@ -8,7 +8,7 @@ const Layuot = () => {
   return (
     <>
       <AppBar />
-      <Suspense fallback={Loader}>
+      <Suspense fallback={<Loader/>}>
         <Outlet />
       </Suspense>
     </>

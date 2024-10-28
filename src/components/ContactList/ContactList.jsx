@@ -9,7 +9,7 @@ const ContactList = () => {
   const dataContact = useSelector(filtData); 
   return (
     <ul className={css.list}>
-      {dataContact.length > 0  ? (
+      {dataContact.length > 0 ? (
         dataContact.map((data) => {
           return <li key={data.id} className={css.listItem}><Contact  dataContact={data} /></li>;
         })
