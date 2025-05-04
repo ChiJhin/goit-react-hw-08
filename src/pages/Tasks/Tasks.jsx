@@ -1,23 +1,14 @@
-import ConctactForm from "../../components/ContactForm/ContactForm";
+import ContactForm from "../../components/ContactForm/ContactForm";
 import ContactList from "../../components/ContactList/ContactList";
 import SearchBar from "../../components/SearchBar/SearchBar";
-import { useEffect } from "react";
-import { useDispatch } from "react-redux";
-import { getContacts } from "../../redux/contact/operation";
 
 const Tasks = () => {
-  const dispatch = useDispatch();
-
-  useEffect(() => {
-    dispatch(getContacts());
-  }, [dispatch]);
-
   return (
     <main>
-      <ConctactForm />
+      <ContactForm />
       <SearchBar />
       <ContactList />
-    </main>
+      </main>
   );
 };
 export default Tasks;

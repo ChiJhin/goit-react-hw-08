@@ -28,7 +28,7 @@ const initialValues = {
   number: "",
 };
 
-const ConctactForm = () => {
+const ContactForm = () => {
   const idName = useId();
   const idNumber = useId();
   const dispatch = useDispatch();
@@ -92,4 +92,4 @@ const ConctactForm = () => {
   );
 };
 
-export default ConctactForm
+export default ContactForm;

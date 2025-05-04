@@ -11,7 +11,7 @@ export const getContacts = createAsyncThunk(
       const response = await axios.get(`${BASE_URL}contacts`);
       return response.data;
     } catch (error) {
-      thunkAPI.rejectWithValue(error.message);
+     return thunkAPI.rejectWithValue(error.message);
     }
   }
 );
@@ -35,7 +35,7 @@ export const addContacts = createAsyncThunk(
       return response.data;
     } catch (error) {
       
-      thunkAPI.rejectWithValue(error.message);
+     return thunkAPI.rejectWithValue(error.message);
     }
   }
 );
@@ -57,7 +57,7 @@ export const deleteContacts = createAsyncThunk(
 );
       return response.data;
     } catch (error) {
-      thunkAPI.rejectWithValue(error.message);
+     return thunkAPI.rejectWithValue(error.message);
     }
   }
 );

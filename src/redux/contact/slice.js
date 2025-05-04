@@ -21,16 +21,18 @@ const contactSlice = createSlice({
     builder
       .addCase(getContacts.pending, handlePending)
       .addCase(getContacts.fulfilled, (state, action) => {
-        state.isLoading = false;
         state.error = null;
+        state.isLoading = false;
         state.items = action.payload;
+        
       })
       .addCase(getContacts.rejected, handleRejected)
       .addCase(addContacts.pending, handlePending)
       .addCase(addContacts.fulfilled, (state, action) => {
-        state.isLoading = false;
         state.error = null;
+        state.isLoading = false;
         state.items.push(action.payload);
+        
       })
       .addCase(addContacts.rejected, handleRejected)
       .addCase(deleteContacts.pending, handlePending)
